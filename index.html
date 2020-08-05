@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>Types of Birds</title>
+    <meta name="description" type="A quiz about birds and colors">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- main role main for screen readers
+         aria-live used to set priority with which screen readers should treat updates to live regions, either off, polite, or assertive
+            rapid updates are annoying?-->
+    <main role="main" aria-live="assertive"> <!-- or class="container" or class="container-fluid"??? -->
+        <header role="banner" class="header">
+            <section>
+                <a href="index.html">
+                    <img class="topCreamina" src="IMG/topCreamina.jpg" alt="My lovebird Creamina"/> <!--img class specific for top img-->
+<!--removed per feedback  <h1>Identify the Birds!</h1> -->
+                </a>
+            </section>
+            <section>
+                <ul><!--placeholder for question number and score-->
+                    <li class="sizeMe">Question:
+                        <span class="questionNumber">0</span>/5</li>
+                    <li class="sizeMe">Score:
+                        <span class="score">0</span></li>
+                </ul>
+            </section>
+        </header>
+
+        <section role="region" class="birdBox" id="startQuiz">
+            <section class="startQuiz box">
+                <h1>Match the Birds to the Correct Color</h1>
+                <img src="IMG/Creamina-yawn.jpg" alt="IMG/Creamina-yawn.jpg" class="images">
+  <!--<img src="IMG/Creamina-yawn.jpg" alt="IMG/Creamina-yawn" class="images">-->
+                <button type="button" class="startButton button">Start</button>
+            </section>
+        </section> <!--EXTRA SECTION??? LOOK INTO LINE 36 SECTION-->
+
+        <section class="questionBox box altBox"></section>
+
+        <section class="response box altBox"></section>
+
+        <section class="final box altBox"></section>
+
+    </main>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
