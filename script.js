@@ -175,13 +175,17 @@ function correctAnswer() {
 //wrong answer display
 function wrongAnswer() {
   console.log("wrongAnswer() fired");
-    $('.response').html(
-        `<h3>Not Quite...</h3>
-        <img src="IMG/thumbsDown.jpg" alt="angry bird"
-        <class="images" width="200px">
-        <p class="sizeMe">What the flock!? It's:</p>
-        <p class="sizeMe">${STORE.questions[STORE.questionNumber].correctAnswer}</p>
-        <button type="button" class="nextButton button">Next</button>`
+  wrongAnswer = renderWrongAnswer();
+}
+
+function renderWrongAnswer() {
+  $('.response').html(
+    `<h3>Not Quite...</h3>
+    <img src="IMG/thumbsDown.jpg" alt="angry bird"
+    <class="images" width="200px">
+    <p class="sizeMe">What the flock!? It's:</p>
+    <p class="sizeMe">${STORE.questions[STORE.questionNumber].correctAnswer}</p>
+    <button type="button" class="nextButton button">Next</button>`
     );
 }
 
