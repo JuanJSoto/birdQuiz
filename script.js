@@ -221,13 +221,17 @@ function finalScore() {
         array = bad;
     }
 
-    return $('.final').html(
-        `<h3>${array[0]}<h3>
-          <img src="${array[1]}" alt="${array[2]}" class="images">
-          <h3>Your score is ${STORE.score} / 5</h3>
-          <p class="sizeMe">${array[3]}</p>
-          <button type="submit" class="restartButton button">Restart</button>`
-    );
+    return renderResult();
+}
+  
+function renderResult() {
+  $('.final').html(
+    `<h3>${array[0]}<h3>
+    <img src="${array[1]}" alt="${array[2]}" class="images">
+    <h3>Your score is ${STORE.score} / 5</h3>
+    <p class="sizeMe">${array[3]}</p>
+    <button type="submit" class="restartButton button">Restart</button>`
+  );
 }
 
 //takes user back to the starting view to restart quiz
